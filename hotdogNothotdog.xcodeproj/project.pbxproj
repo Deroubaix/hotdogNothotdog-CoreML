@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C52B46A82147CA5900CCF342 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C52B46A72147CA5900CCF342 /* Inceptionv3.mlmodel */; };
 		C564816821470556006FE1FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C564816721470556006FE1FF /* AppDelegate.swift */; };
 		C564816A21470556006FE1FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C564816921470556006FE1FF /* ViewController.swift */; };
 		C564816D21470556006FE1FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C564816B21470556006FE1FF /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C52B46A72147CA5900CCF342 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../Downloads/Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		C564816421470556006FE1FF /* hotdogNothotdog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hotdogNothotdog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C564816721470556006FE1FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C564816921470556006FE1FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		C564816621470556006FE1FF /* hotdogNothotdog */ = {
 			isa = PBXGroup;
 			children = (
+				C52B46A72147CA5900CCF342 /* Inceptionv3.mlmodel */,
 				C564816721470556006FE1FF /* AppDelegate.swift */,
 				C564816921470556006FE1FF /* ViewController.swift */,
 				C564816B21470556006FE1FF /* Main.storyboard */,
@@ -71,9 +74,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C564817621470558006FE1FF /* Build configuration list for PBXNativeTarget "hotdogNothotdog" */;
 			buildPhases = (
+				8324B8B3974EF19B63CFDBAD /* [CP] Check Pods Manifest.lock */,
 				C564816021470556006FE1FF /* Sources */,
 				C564816121470556006FE1FF /* Frameworks */,
 				C564816221470556006FE1FF /* Resources */,
+				52B79CB1D6A84C5B310BEB6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +135,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52B79CB1D6A84C5B310BEB6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-hotdogNothotdog/Pods-hotdogNothotdog-frameworks.sh",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+			showEnvVarsInLog = 0;
+		};
+		8324B8B3974EF19B63CFDBAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hotdogNothotdog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C564816021470556006FE1FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C564816A21470556006FE1FF /* ViewController.swift in Sources */,
+				C52B46A82147CA5900CCF342 /* Inceptionv3.mlmodel in Sources */,
 				C564816821470556006FE1FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,12 +328,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PC6LC4JT7J;
 				INFOPLIST_FILE = hotdogNothotdog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deroubaix.hotdogNothotdog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -299,8 +349,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PC6LC4JT7J;
 				INFOPLIST_FILE = hotdogNothotdog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

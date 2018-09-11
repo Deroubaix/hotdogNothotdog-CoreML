@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qBX-yg-aPr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,83 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hotdogNothotdog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotdogback" translatesAutoresizingMaskIntoConstraints="NO" id="lhw-d8-99j">
+                                <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="NOs-Sv-oWM"/>
+                                    <constraint firstAttribute="width" constant="240" id="nCN-IL-Lei"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WnM-ra-b1b">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jtm-Kj-BPQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="9uN-1U-Ldn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.39616828690318251" green="0.96311175010879702" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jtm-Kj-BPQ" secondAttribute="trailing" id="BQr-Tz-7aC"/>
+                            <constraint firstItem="WnM-ra-b1b" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Vvq-xQ-7OR"/>
+                            <constraint firstItem="Jtm-Kj-BPQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d4p-kq-9wm"/>
+                            <constraint firstItem="lhw-d8-99j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ejg-Sm-22z"/>
+                            <constraint firstItem="lhw-d8-99j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fjM-2t-yiX"/>
+                            <constraint firstItem="WnM-ra-b1b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g62-fT-EH3"/>
+                            <constraint firstItem="WnM-ra-b1b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kl3-97-I4q"/>
+                            <constraint firstAttribute="trailing" secondItem="WnM-ra-b1b" secondAttribute="trailing" id="pWY-IJ-Bdw"/>
+                            <constraint firstItem="Jtm-Kj-BPQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sDx-9E-NHF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3TZ-O0-niI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="8b4-Mq-Lh4">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="Lg5-GJ-wiI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="WnM-ra-b1b" id="pup-ot-K5m"/>
+                        <outlet property="topBarImage" destination="Jtm-Kj-BPQ" id="CYE-ZY-GEp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1101.5999999999999" y="-582.45877061469275"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YWN-2s-ZAk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qBX-yg-aPr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GZZ-4R-WlJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                            <color key="textColor" red="1" green="0.86710080584357108" blue="0.19040382194570704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0kS-1V-8QR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PIe-ND-eFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="-582.45877061469275"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hotdogback" width="91.680000305175781" height="68.639999389648438"/>
+    </resources>
 </document>
